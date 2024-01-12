@@ -17,7 +17,6 @@ html {
 .viewport {
     width: 42vw;
     height: 21vw;
-    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,6 +30,7 @@ html {
     height: 33.33333333%;
     background-color: #ccc;
     position: relative;
+    transform: rotateX(0deg);
 }
 
 .face {
@@ -38,4 +38,39 @@ html {
     height: 100%;
     background-color: red;
     position: absolute;
+    opacity: .7;
+    font-size: 5rem;
+    color: White;
+}
+
+.front {
+    transform: translateZ(21vw);
+}
+
+.back {
+    transform: translateZ(-21vw) rotateY(180deg);
+}
+
+.left {
+    transform: translateX(-21vw) rotateY(-90deg);
+}
+
+.right {
+    transform: translateX(21vw) rotateY(90deg);
+}
+
+.top {
+    height: 42vw;
+    background-color: #111;
+    transform: translateZ(-21vw) rotateX(90deg);
+    transform-origin: top;
+}
+
+.bottom {
+    height: 42vw;
+    background-color: #111;
+    transform: translateZ(21vw) translateY(7vw) rotateX(-90deg);
+    transform-origin: top;
+
+
 }
