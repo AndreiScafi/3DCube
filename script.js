@@ -14,11 +14,13 @@ const rotate = () => {
 leftArrow.addEventListener('click', () => {
     x += 90;
     rotate();
+    if (bool) playPauseFunction();
 });
 
 rightArrow.addEventListener('click', () => {
     x -= 90;
     rotate();
+    if (bool) playPauseFunction();
 });
 
 //Hover Effect
@@ -57,9 +59,11 @@ const playPauseFunction = () => {
             rotate();
         }, 3000);
         bool = true;
+        changePlayPause();
     } else {
         clearInterval(interval);
         bool = false;
+        changePlayPause();
     }
 }
 
@@ -77,5 +81,4 @@ const changePlayPause = () => {
 
 playPause.addEventListener('click', () => {
     playPauseFunction();
-    changePlayPause();
 })
